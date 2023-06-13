@@ -26,3 +26,5 @@ table_check_hw-*.tar
 /tmp/
 
 *.DS_Store
+
+.mix_tasks
