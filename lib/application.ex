@@ -9,6 +9,7 @@ defmodule TableCheckHw.Application do
     http_port = Application.get_env(:table_check_hw, :http_port, 8080)
 
     children = [
+      TableCheckHw.Repo,
       {Plug.Cowboy, scheme: :http, plug: TableCheckHw.Router, options: cowboy_opts(http_port)}
     ]
 
