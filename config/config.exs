@@ -6,4 +6,7 @@ config :table_check_hw,
 config :logger,
   level: :info
 
+config :table_check_hw,
+  ecto_repos: [TableCheckHw.Repo]
+
 import_config "#{config_env()}.exs"

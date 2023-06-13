@@ -22,7 +22,10 @@ defmodule TableCheckHw.MixProject do
 
   defp aliases do
     [
-      compile: ["format", "compile"]
+      compile: ["format", "compile"],
+      setup: ["deps.get", "ecto.setup"],
+      "ecto.setup": ["ecto.create", "ecto.migrate", "run priv/repo/seeds.exs"],
+      "ecto.reset": ["ecto.drop", "ecto.setup"]
     ]
   end
 
