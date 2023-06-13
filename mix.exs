@@ -31,7 +31,9 @@ defmodule TableCheckHw.MixProject do
     [
       {:plug_cowboy, "~> 2.0"},
       {:jason, "~> 1.4"},
-      {:cowboy, "~> 2.9"}
+      {:cowboy, "~> 2.9"},
+      {:ecto_sql, "~> 3.6"},
+      {:postgrex, ">= 0.0.0"}
     ]
   end
 end
