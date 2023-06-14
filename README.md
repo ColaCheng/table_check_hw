@@ -1,16 +1,22 @@
 # TableCheck Data Operations (Elixir Developer) - Take Home Project
 
 Take a look at the dataset located in `/data/data.csv`. Your goal is to interpret it and create an API that can answer the following questions:
-  - [ ] How many customers visited the "Restaurant at the end of the universe"?
-  - [ ] How much money did the "Restaurant at the end of the universe" make?
-  - [ ] What was the most popular dish at each restaurant?
-  - [ ] What was the most profitable dish at each restaurant?
-  - [ ] Who visited each store the most, and who visited the most stores?
+  - [v] How many customers visited the "Restaurant at the end of the universe"?
+    - GET `/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/customers/count`
+  - [v] How much money did the "Restaurant at the end of the universe" make?
+    - GET `/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/revenue`
+  - [v] What was the most popular dish at each restaurant?
+    - GET `/v1/orders/restaurants/dishes/top`
+  - [v] What was the most profitable dish at each restaurant?
+    - GET `/v1/orders/restaurants/dishes/profit/top`
+  - [v] Who visited each store the most, and who visited the most stores?
+    - GET `/v1/orders/restaurants/customers/top` (Who visited each store the most?)
+    - GET `/v1/orders/customers/top` (Who visited the most stores?)
 
 ## Tasks
 
-- [ ] Ingest the data into your database of choice.
-- [ ] Create an API.
+- [v] Ingest the data into your database of choice.
+- [v] Create an API.
 - [ ] Create API documentation that has explicit examples on how to answer the questions listed above.
 - [ ] Document your solution as a whole.
 
