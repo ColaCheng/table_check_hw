@@ -15,6 +15,8 @@ defmodule TableCheckHw.Router do
     send_resp(conn, 204, "")
   end
 
+  forward("/", to: TableCheckHw.Routes.Public)
+
   @impl Plug.ErrorHandler
   def handle_errors(conn, %{kind: _kind, reason: _reason, stack: _stack} = err) do
     Logger.error(err)

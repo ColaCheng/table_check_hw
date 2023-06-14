@@ -13,8 +13,8 @@ defmodule TableCheckHw.Order do
     |> hd()
   end
 
-  @spec sum_revenue_by_restaurant_name(name :: String.t()) :: float() | nil
-  def sum_revenue_by_restaurant_name(restaurant_name) do
+  @spec get_revenue_by_restaurant_name(name :: String.t()) :: float() | nil
+  def get_revenue_by_restaurant_name(restaurant_name) do
     from(o in Order,
       where: o.restaurant_name == ^restaurant_name,
       select: sum(o.food_cost)

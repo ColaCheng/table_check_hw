@@ -14,8 +14,8 @@ defmodule TableCheckHw.OrderTest do
     end
   end
 
-  describe "sum_revenue_by_restaurant_name/1" do
-    test "able to sum revenue by restaurant" do
+  describe "get_revenue_by_restaurant_name/1" do
+    test "able to get revenue by restaurant" do
       cola_count = :rand.uniform(100)
       chips_count = :rand.uniform(100)
       ice_cream_count = :rand.uniform(100)
@@ -31,7 +31,7 @@ defmodule TableCheckHw.OrderTest do
 
       expect = cola_count * 2.5 + chips_count * 5.0 + ice_cream_count * 10.0
 
-      assert expect == Order.sum_revenue_by_restaurant_name("A")
+      assert expect == Order.get_revenue_by_restaurant_name("A")
     end
   end
 
