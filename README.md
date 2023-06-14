@@ -1,23 +1,23 @@
 # TableCheck Data Operations (Elixir Developer) - Take Home Project
 
 Take a look at the dataset located in `/data/data.csv`. Your goal is to interpret it and create an API that can answer the following questions:
-  - [v] How many customers visited the "Restaurant at the end of the universe"?
+  - [x] How many customers visited the "Restaurant at the end of the universe"?
     - [GET `/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/customers/count`](/docs/api.md#count-customers-by-restaurant-name)
-  - [v] How much money did the "Restaurant at the end of the universe" make?
+  - [x] How much money did the "Restaurant at the end of the universe" make?
     - [GET `/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/revenue`](/docs/api.md#get-revenue-by-restaurant-name)
-  - [v] What was the most popular dish at each restaurant?
+  - [x] What was the most popular dish at each restaurant?
     - [GET `/v1/orders/restaurants/dishes/top`](/docs/api.md#get-the-most-popular-dish-at-restaurant)
-  - [v] What was the most profitable dish at each restaurant?
+  - [x] What was the most profitable dish at each restaurant?
     - [GET `/v1/orders/restaurants/dishes/profit/top`](/docs/api.md#get-the-most-profitable-dish-at-each-restaurant)
-  - [v] Who visited each store the most, and who visited the most stores?
+  - [x] Who visited each store the most, and who visited the most stores?
     - [GET `/v1/orders/restaurants/customers/top` (Who visited each store the most?)](/docs/api.md#get-the-top-customer-at-each-restaurant)
     - [GET `/v1/orders/customers/top` (Who visited the most stores?)](/docs/api.md#get-the-top-customer)
 
 ## Tasks
 
-- [v] Ingest the data into your database of choice.
-- [v] Create an API.
-- [v] Create API documentation that has explicit examples on how to answer the questions listed above.
+- [x] Ingest the data into your database of choice.
+- [x] Create an API.
+- [x] Create API documentation that has explicit examples on how to answer the questions listed above.
 - [ ] Document your solution as a whole.
 
 Please document your solution, and provide answers to the following questions at the end as well.
