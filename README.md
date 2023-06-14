@@ -59,8 +59,8 @@ Now you should be getting response from `curl -i http://localhost:8080/health`.
 ## Running Test
 
 1. assuming you have gone through all of [Setup Section](#setup)
-2. run `MIX_ENV=test mix ecto.reset`
-3. run `mix test.watch`
+2. run `mix ecto.reset`
+3. run `mix test`
 
 ## Documentation
 
