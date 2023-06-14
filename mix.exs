@@ -9,7 +9,11 @@ defmodule TableCheckHw.MixProject do
       elixirc_paths: elixirc_paths(Mix.env()),
       start_permanent: Mix.env() == :prod,
       aliases: aliases(),
-      deps: deps()
+      deps: deps(),
+      dialyzer: [
+        plt_local_path: "priv/plts",
+        plt_add_apps: [:mix, :ex_unit]
+      ]
     ]
   end
 
@@ -43,6 +47,14 @@ defmodule TableCheckHw.MixProject do
       {:cowboy, "~> 2.9"},
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},
+
+      # linters
+      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
+      {:dialyxir, "~> 1.2",
+       [
+         only: [:dev, :test],
+         runtime: false
+       ]},
 
       # Testing
       {:ex_machina, "~> 2.7.0", only: :test}

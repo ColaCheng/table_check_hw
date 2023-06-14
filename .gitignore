@@ -28,3 +28,5 @@ table_check_hw-*.tar
 *.DS_Store
 
 .mix_tasks
+
+priv/plts/

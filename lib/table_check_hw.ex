@@ -1,4 +1,5 @@
 defmodule TableCheckHw do
+  @moduledoc false
   def context do
     quote do
       import Ecto.Query

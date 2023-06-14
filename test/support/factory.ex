@@ -1,4 +1,5 @@
 defmodule TableCheckHw.Factory do
+  @moduledoc false
   use ExMachina.Ecto, repo: TableCheckHw.Repo
 
   alias TableCheckHw.Schema.Order

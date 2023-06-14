@@ -1,4 +1,8 @@
 defmodule TableCheckHw.Schema.Order do
+  @moduledoc """
+  Schema for Order
+  """
+
   use TableCheckHw, :schema
 
   schema "orders" do
@@ -8,12 +12,5 @@ defmodule TableCheckHw.Schema.Order do
     field(:food_cost, :float)
 
     timestamps()
-  end
-
-  @doc false
-  def changeset(order, attrs) do
-    order
-    |> cast(attrs, [:restaurant_name, :food_name, :first_name, :food_cost])
-    |> validate_required([:restaurant_name, :food_name, :first_name, :food_cost])
   end
 end

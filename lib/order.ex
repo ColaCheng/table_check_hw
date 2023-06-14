@@ -1,4 +1,8 @@
 defmodule TableCheckHw.Order do
+  @moduledoc """
+  The order context functionality module
+  """
+
   use TableCheckHw, :context
 
   alias TableCheckHw.Schema.Order
