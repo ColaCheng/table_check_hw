@@ -1,6 +1,6 @@
 defmodule TableCheckHw.Routes.Order.Restaurant.Revenue do
   @moduledoc """
-  A HTTP request handler for getting sum revenue by restaurant_name.
+  A HTTP request handler for getting revenue by restaurant_name.
   """
   @behaviour Plug
 

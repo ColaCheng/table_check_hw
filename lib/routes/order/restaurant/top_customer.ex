@@ -1,6 +1,6 @@
 defmodule TableCheckHw.Routes.Order.Restaurant.TopCustomer do
   @moduledoc """
-  A HTTP request handler for getting the top customer at restaurant.
+  A HTTP request handler for getting the top customer at each restaurant.
   """
   @behaviour Plug
 
