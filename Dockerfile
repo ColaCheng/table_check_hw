@@ -15,7 +15,6 @@ RUN mix do deps.get, deps.compile, compile
 
 # Build Release
 RUN mkdir -p /opt/release \
-    && mix prepare_docs \
     && mix release \
     && mv _build/${MIX_ENV}/rel/table_check_hw /opt/release
 

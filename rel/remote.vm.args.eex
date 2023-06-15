@@ -1,0 +1,35 @@
+## Customize flags given to the VM: https://www.erlang.org/doc/man/erl.html
+## -mode/-name/-sname/-setcookie are configured via env vars, do not set them here
+
+## Increase number of concurrent ports/sockets
+##+Q 65536
+
+## Tweak GC to run more often
+##-env ERL_FULLSWEEP_AFTER 10
+
+# Enable time correction. This should be enabled by default,
+# but let's be sure about it.
++c true
++C multi_time_warp
+
+# Scheduler wakeup threshold. A lower threshold means more wakeups,
+# which distributes work over multiple schedulers faster, at the cost of
+# work bouncing between schedulers more easily.
+#
+# There are separate settings for ordinary, dirty io, and dirty cpu schedulers
++swt very_low
++swtdio very_low
++swtdcpu very_low
+
+# Scheduler busy-wait threshold. A lower threshold means schedulers busy-wait
+# after running out of work and before going to sleep.
+#
+# Busy waiting trades higher CPU usage for lower latency.
+#
+# In an environment that runs Erlang under CFS quotas, like kubernetes, busy
+# waiting results in the Erlang scheduler threads being throttled.
+#
+# There are separate settings for ordinary, dirty io, and dirty cpu schedulers.
++sbwt none
++sbwtdcpu none
++sbwtdio none
