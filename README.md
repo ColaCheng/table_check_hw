@@ -128,10 +128,10 @@ Make sure you have the following installed on your machine:
 
 ## Setup
 
-1. Clone the project `git clone git@github.com:ColaCheng/table_check_hw.git`
+1. clone the project `git clone git@github.com:ColaCheng/table_check_hw.git`
 2. `cd` into project directory
 3. run `asdf install` to install Erlang and Elixir
-4. run `mix deps.get` to install required dependencies
+4. run `mix do deps.get, compile` to install required dependencies and compile it
 5. run `docker-compose up -d` to create local PostgreSQL database(optional, if you prefer to run PostgreSQL in another way)
 6. run `mix ecto.setup` to create development db, run migrations, and insert seed data from [/data/data.csv](/data/data.csv)
 
