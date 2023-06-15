@@ -13,4 +13,5 @@ config :table_check_hw, TableCheckHw.Repo,
   pool_size: String.to_integer(System.get_env("POOL_SIZE") || "10")
 
 config :table_check_hw,
-  env_name: System.get_env("ENV_NAME") || "unknown"
+  env_name: System.get_env("ENV_NAME") || "unknown",
+  http_port: String.to_integer(System.get_env("HTTP_PORT") || "8080")
