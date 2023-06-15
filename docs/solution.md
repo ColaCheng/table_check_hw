@@ -227,9 +227,7 @@ From the consumer perspective, we should know the data is time critical or not. 
 
 ### How would you improve the deployment of this system?
 
-I already provide the `Dockerfile` so it can be easy to deploy the service into Kubernetes or other containerized environments.
-
-> Note: Maybe involve Terraform, Ansible, Argo, and so on that depending on the infrastructure.
+I already provide the `Dockerfile` so it can be easy to deploy the service into Kubernetes or other containerized environments. It will help to horizontal Scaling the service.
 
 #### Things to set up
 
@@ -238,3 +236,5 @@ I already provide the `Dockerfile` so it can be easy to deploy the service into 
 - Metrics dashboard to monitor service
   - For example: Use Grafana/Datadog to make a dashboard and set up alerts if something goes wrong
 - Code review process
+- Simplify infrastructure provisioning
+  - For example: Terraform, Ansible, Argo, and so on that depending on the infrastructure.
