@@ -132,8 +132,8 @@ Make sure you have the following installed on your machine:
 2. `cd` into project directory
 3. run `asdf install` to install Erlang and Elixir
 4. run `mix deps.get` to install required dependencies
-5. run `mix ecto.setup` to create development db, run migrations, and insert seed data
-6. run `docker-compose up -d` to create local PostgreSQL database(optional, if you prefer to run PostgreSQL in another way)
+5. run `docker-compose up -d` to create local PostgreSQL database(optional, if you prefer to run PostgreSQL in another way)
+6. run `mix ecto.setup` to create development db, run migrations, and insert seed data from [/data/data.csv](/data/data.csv)
 
 > If you want to recreate the DB environment, run: `mix ecto.reset`
 
