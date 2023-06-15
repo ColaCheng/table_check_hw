@@ -10,6 +10,7 @@ defmodule TableCheckHw.Application do
 
     children = [
       TableCheckHw.Repo,
+      TableCheckHw.Telemetry,
       {Plug.Cowboy, scheme: :http, plug: TableCheckHw.Router, options: cowboy_opts(http_port)}
     ]
 

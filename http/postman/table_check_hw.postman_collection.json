@@ -1,30 +1,11 @@
 {
 	"info": {
-		"_postman_id": "a406faf3-2876-4e82-98ec-d8a7ca7da30a",
+		"_postman_id": "befe6831-626f-4fbc-be49-dfda14d8774d",
 		"name": "hw",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "1085355"
 	},
 	"item": [
-		{
-			"name": "health",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": {
-					"raw": "http://localhost:8080/health",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"health"
-					]
-				}
-			},
-			"response": []
-		},
 		{
 			"name": "count-customers-by-restaurant-name",
 			"request": {
@@ -159,6 +140,44 @@
 						"orders",
 						"customers",
 						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "metrics",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/metrics",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"metrics"
 					]
 				}
 			},

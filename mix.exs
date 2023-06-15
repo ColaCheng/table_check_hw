@@ -48,6 +48,10 @@ defmodule TableCheckHw.MixProject do
       {:ecto_sql, "~> 3.6"},
       {:postgrex, ">= 0.0.0"},
 
+      # telemetry
+      {:telemetry_poller, "~> 1.0"},
+      {:peep, "~> 1.0"},
+
       # linters
       {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
       {:dialyxir, "~> 1.2",

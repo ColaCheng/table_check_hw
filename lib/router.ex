@@ -3,6 +3,8 @@ defmodule TableCheckHw.Router do
   use Plug.Router
   use Plug.ErrorHandler
 
+  plug(Plug.Telemetry, event_prefix: [:table_check_hw, :http])
+
   plug(Plug.Logger, log: :debug)
 
   plug(Plug.Parsers,
@@ -15,6 +17,11 @@ defmodule TableCheckHw.Router do
 
   get "/health" do
     send_resp(conn, 204, "")
+  end
+
+  get "/metrics" do
+    metrics = TableCheckHw.Telemetry.scrape()
+    send_resp(conn, 200, metrics)
   end
 
   forward("/", to: TableCheckHw.Routes.Public)
