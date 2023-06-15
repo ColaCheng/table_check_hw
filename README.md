@@ -137,10 +137,34 @@ Make sure you have the following installed on your machine:
 
 > If you want to recreate the DB environment, run: `mix ecto.reset`
 
-## Running Server
+## Running Service
 
 In terminal, run `iex -S mix run`.
 Now you should be getting response from `curl -i http://localhost:8080/health`.
+
+Or run the service from the release package. This is the normal way to run the Elixir application in the production environment.
+
+```
+$ MIX_ENV=prod mix release
+Release created at _build/prod/rel/table_check_hw
+
+    # To start your system
+    _build/prod/rel/table_check_hw/bin/table_check_hw start
+
+Once the release is running:
+
+    # To connect to it remotely
+    _build/prod/rel/table_check_hw/bin/table_check_hw remote
+
+    # To stop it gracefully (you may also send SIGINT/SIGTERM)
+    _build/prod/rel/table_check_hw/bin/table_check_hw stop
+
+To list all commands:
+
+    _build/prod/rel/table_check_hw/bin/table_check_hw
+
+$ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/table_check_hw_dev" ./_build/prod/rel/table_check_hw/bin/table_check_hw start
+```
 
 ## Running Test
 
