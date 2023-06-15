@@ -14,6 +14,30 @@ GET /health
 HTTP/1.1 204 No Content
 ```
 
+### Metrics
+
+The endpoint for Prometheus to scrape the metrics.
+
+**Request**:
+
+```
+GET /metrics
+```
+
+**Response**:
+
+```
+HTTP/1.1 200 OK
+
+result:
+# HELP table_check_hw_http_requests
+# TYPE table_check_hw_http_requests histogram
+table_check_hw_http_requests_bucket{env="unknown",method="GET",route="/metrics",service="table_check_hw",status="200",le="10207.234282"} 1
+table_check_hw_http_requests_bucket{env="unknown",method="GET",route="/metrics",service="table_check_hw",status="200",le="+Inf"} 1
+table_check_hw_http_requests_sum{env="unknown",method="GET",route="/metrics",service="table_check_hw",status="200"} 9851
+table_check_hw_http_requests_count{env="unknown",method="GET",route="/metrics",service="table_check_hw",status="200"} 1
+```
+
 ### Count customers by restaurant name
 
 **Request**:
