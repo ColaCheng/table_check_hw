@@ -139,10 +139,14 @@ Make sure you have the following installed on your machine:
 
 ## Running Service
 
+### mix run
+
 In terminal, run `iex -S mix run`.
 Now you should be getting response from `curl -i http://localhost:8080/health`.
 
-Or run the service from the release package. This is the normal way to run the Elixir application in the production environment.
+### release package run
+
+This is the normal way to run the Elixir application in the production environment.
 
 ```
 $ MIX_ENV=prod mix release
@@ -165,6 +169,26 @@ To list all commands:
 
 $ DATABASE_URL="postgresql://postgres:postgres@localhost:5432/table_check_hw_dev" ./_build/prod/rel/table_check_hw/bin/table_check_hw start
 ```
+
+### use docker
+
+1. Build the docker image
+
+        docker build -t table_check_hw:latest .
+
+2. Run the docker container
+
+        docker run \
+        -e HTTP_PORT=8080 \
+        -e DATABASE_URL="postgresql://{DB_USERNAME}:{DB_PASSWORD}@{DB_HOST}:{DB_PORT}/{DB_NAME}" \
+        --publish 8080:8080 \
+        table_check_hw:latest
+
+3. Validate that it works by querying the `/health` endpoint
+
+        curl -i http://localhost:8080/health
+
+    This should return 204.
 
 ## Running Test
 

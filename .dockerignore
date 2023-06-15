@@ -1,0 +1,12 @@
+_build/
+.elixir_ls/
+.git/
+.vscode/
+deps/
+priv/static/
+test/
+.dockerignore
+.env
+.gitignore
+.github
+Dockerfile
