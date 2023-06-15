@@ -3,15 +3,100 @@
 Take a look at the dataset located in `/data/data.csv`. Your goal is to interpret it and create an API that can answer the following questions:
   - [x] How many customers visited the "Restaurant at the end of the universe"?
     - [GET `/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/customers/count`](/docs/api.md#count-customers-by-restaurant-name)
+    - Answer: 37230
   - [x] How much money did the "Restaurant at the end of the universe" make?
     - [GET `/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/revenue`](/docs/api.md#get-revenue-by-restaurant-name)
+    - Answer: 186944.0
   - [x] What was the most popular dish at each restaurant?
     - [GET `/v1/orders/restaurants/dishes/top`](/docs/api.md#get-the-most-popular-dish-at-restaurant)
+    - Answer:
+```
+[
+    {
+        "count": 1196,
+        "food_name": "juice",
+        "restaurant_name": "johnnys-cashew-stand"
+    },
+    {
+        "count": 1185,
+        "food_name": "honey",
+        "restaurant_name": "bean-juice-stand"
+    },
+    {
+        "count": 1158,
+        "food_name": "cheese",
+        "restaurant_name": "the-restaurant-at-the-end-of-the-universe"
+    },
+    {
+        "count": 1151,
+        "food_name": "beans",
+        "restaurant_name": "the-ice-cream-parlor"
+    }
+]
+```
   - [x] What was the most profitable dish at each restaurant?
     - [GET `/v1/orders/restaurants/dishes/profit/top`](/docs/api.md#get-the-most-profitable-dish-at-each-restaurant)
-  - [x] Who visited each store the most, and who visited the most stores?
-    - [GET `/v1/orders/restaurants/customers/top` (Who visited each store the most?)](/docs/api.md#get-the-top-customer-at-each-restaurant)
-    - [GET `/v1/orders/customers/top` (Who visited the most stores?)](/docs/api.md#get-the-top-customer)
+    - Answer:
+```
+[
+    {
+        "food_name": "juice",
+        "restaurant_name": "johnnys-cashew-stand",
+        "sum": 5989.0
+    },
+    {
+        "food_name": "honey",
+        "restaurant_name": "bean-juice-stand",
+        "sum": 5945.5
+    },
+    {
+        "food_name": "cheese",
+        "restaurant_name": "the-restaurant-at-the-end-of-the-universe",
+        "sum": 5861.5
+    },
+    {
+        "food_name": "coffee",
+        "restaurant_name": "the-ice-cream-parlor",
+        "sum": 5789.5
+    }
+]
+```
+  - [x] Who visited each store the most?
+    - [GET `/v1/orders/restaurants/customers/top`](/docs/api.md#get-the-top-customer-at-each-restaurant)
+    - Answer:
+```
+[
+    {
+        "first_name": "Michael",
+        "restaurant_name": "the-ice-cream-parlor",
+        "visit_count": 915
+    },
+    {
+        "first_name": "Michael",
+        "restaurant_name": "bean-juice-stand",
+        "visit_count": 855
+    },
+    {
+        "first_name": "Michael",
+        "restaurant_name": "the-restaurant-at-the-end-of-the-universe",
+        "visit_count": 849
+    },
+    {
+        "first_name": "Michael",
+        "restaurant_name": "johnnys-cashew-stand",
+        "visit_count": 843
+    }
+]
+```
+  - [x] Who visited the most stores?
+    - [GET `/v1/orders/customers/top`](/docs/api.md#get-the-top-customer)
+    - Answer:
+```
+{
+    "first_name": "Michael",
+    "visit_count": 3462
+}
+```
 
 ## Tasks
 
@@ -19,6 +104,7 @@ Take a look at the dataset located in `/data/data.csv`. Your goal is to interpre
 - [x] Create an API.
 - [x] Create API documentation that has explicit examples on how to answer the questions listed above.
 - [ ] Document your solution as a whole.
+  - Please check [docs/solution.md](/docs/solution.md)
 
 Please document your solution, and provide answers to the following questions at the end as well.
 * How would you build this differently if the data was being streamed from Kafka?
@@ -67,3 +153,4 @@ Now you should be getting response from `curl -i http://localhost:8080/health`.
 Please check the documentation in `docs` folder.
 
 - [API documentation](/docs/api.md)
+- [Solution documentation](/docs/solution.md)
