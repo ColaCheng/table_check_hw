@@ -17,6 +17,8 @@ CREATE TABLE orders (
     inserted_at     timestamp(0),
     updated_at      timestamp(0)
 );
+
+CREATE UNIQUE INDEX orders_restaurant_name_index ON orders (restaurant_name);
 ```
 
 ### Query
