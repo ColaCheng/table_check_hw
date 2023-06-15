@@ -154,7 +154,7 @@ But I didn't against using Phoenix framework. Phoenix is great!
 - The `router.ex` is the entry point for all the endpoints.
 - The `public.ex` is the entry point for public endpoints.
 - The `order.ex` is the entry point for order API endpoints.
-  - Break down the order API into `./routes/order` folder and implement all the HTTP handler logic.
+  - Break down the order API into `./routes/order` folder and implement each API handler logic.
 
 ## FAQs
 
