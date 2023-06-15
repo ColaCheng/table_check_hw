@@ -103,7 +103,7 @@ Take a look at the dataset located in `/data/data.csv`. Your goal is to interpre
 - [x] Ingest the data into your database of choice.
 - [x] Create an API.
 - [x] Create API documentation that has explicit examples on how to answer the questions listed above.
-- [ ] Document your solution as a whole.
+- [x] Document your solution as a whole.
   - Please check [docs/solution.md](/docs/solution.md)
 
 Please document your solution, and provide answers to the following questions at the end as well.
