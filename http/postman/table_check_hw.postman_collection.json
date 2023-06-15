@@ -1,0 +1,168 @@
+{
+	"info": {
+		"_postman_id": "a406faf3-2876-4e82-98ec-d8a7ca7da30a",
+		"name": "hw",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "1085355"
+	},
+	"item": [
+		{
+			"name": "health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/health",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "count-customers-by-restaurant-name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/customers/count",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"restaurants",
+						"the-restaurant-at-the-end-of-the-universe",
+						"customers",
+						"count"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-revenue-by-restaurant-name",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/restaurants/the-restaurant-at-the-end-of-the-universe/revenue",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"restaurants",
+						"the-restaurant-at-the-end-of-the-universe",
+						"revenue"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-the-most-popular-dish-at-restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/restaurants/dishes/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"restaurants",
+						"dishes",
+						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-the-most-profitable-dish-at-each-restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/restaurants/dishes/profit/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"restaurants",
+						"dishes",
+						"profit",
+						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-the-top-customer-at-each-restaurant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/restaurants/customers/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"restaurants",
+						"customers",
+						"top"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get-the-top-customer",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/orders/customers/top",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"orders",
+						"customers",
+						"top"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

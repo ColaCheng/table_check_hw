@@ -148,6 +148,13 @@ Now you should be getting response from `curl -i http://localhost:8080/health`.
 2. run `mix ecto.reset`
 3. run `mix test`
 
+## Testing HTTP API
+
+Please use your familiar tool to access the API according to the [API documentation](/docs/api.md).
+Or you can import the Postman config file from [table_check_hw.postman_collection.json](/http/postman/table_check_hw.postman_collection.json) then you can try to play with that.
+
+> Note: run the server first!
+
 ## Documentation
 
 Please check the documentation in `docs` folder.
