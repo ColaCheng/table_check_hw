@@ -185,6 +185,13 @@ ORDER BY s0.visit_count DESC;
 
 Use elixir script to parse the `data.csv` file and combine it with mix task(`ecto.setup`) to generate seeds data for the service.
 
+> Note: We can move out seeds generation from `ecto.setup` if we want to separate this step. Then we need to manually run this `priv/repo/seeds.exs` script.
+
+Run seeds script:
+```
+mix run priv/repo/seeds.exs
+```
+
 ## HTTP server
 
 Use `plug_cowboy` as HTTP server because I think using Phoenix to build a simple API server is a little bit overkill.

@@ -11,6 +11,6 @@ defmodule TableCheckHw.Schema.Order do
     field(:first_name, :string)
     field(:food_cost, :float)
 
-    timestamps()
+    timestamps(type: :naive_datetime_usec)
   end
 end
