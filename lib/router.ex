@@ -3,6 +3,8 @@ defmodule TableCheckHw.Router do
   use Plug.Router
   use Plug.ErrorHandler
 
+  plug(Plug.Logger, log: :debug)
+
   plug(Plug.Parsers,
     parsers: [json: [json_decoder: Jason]],
     pass: ["application/json"]
