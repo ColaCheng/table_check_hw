@@ -1,4 +1,18 @@
-## Order APIs
+## APIs
+
+### Health
+
+**Request**:
+
+```
+GET /health
+```
+
+**Response**:
+
+```
+HTTP/1.1 204 No Content
+```
 
 ### Count customers by restaurant name
 
