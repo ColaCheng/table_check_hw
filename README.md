@@ -110,6 +110,7 @@ Please document your solution, and provide answers to the following questions at
 * How would you build this differently if the data was being streamed from Kafka?
 * How would you improve the deployment of this system?
 
+> Note: Please check [docs/solution.md#faqs](/docs/solution.md#faqs)
 
 ## Questions
 ### What library should I use?
