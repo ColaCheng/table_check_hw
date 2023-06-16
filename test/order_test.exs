@@ -3,6 +3,18 @@ defmodule TableCheckHw.OrderTest do
 
   alias TableCheckHw.Order
 
+  describe "insert_all/2" do
+    test "able to insert all the order data" do
+      order_count = :rand.uniform(100)
+
+      build_list(order_count, :order)
+      |> Enum.map(&TableCheckHw.Schema.Order.__to_map__/1)
+      |> Order.insert_all()
+
+      assert order_count == Repo.all(TableCheckHw.Schema.Order) |> length()
+    end
+  end
+
   describe "count_customers_by_restaurant_name/1" do
     test "able to count customers by restaurant" do
       restaurant_a_order_count = :rand.uniform(100)

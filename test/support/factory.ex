@@ -96,11 +96,15 @@ defmodule TableCheckHw.Factory do
           v
       end
 
+    now = NaiveDateTime.utc_now()
+
     %Order{
       restaurant_name: restaurant_name,
       food_name: food_name,
       first_name: first_name,
-      food_cost: food_cost
+      food_cost: food_cost,
+      inserted_at: now,
+      updated_at: now
     }
   end
 end

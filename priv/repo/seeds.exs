@@ -9,13 +9,12 @@
 #
 # We recommend using the bang functions (`insert!`, `update!`
 # and so on) as they will fail if something goes wrong.
-alias TableCheckHw.Schema.Order
-alias TableCheckHw.Repo
+alias TableCheckHw.Order
 alias TableCheckHw.Parsers.CSV
 
 unless Mix.env() == :test do
   CSV.stream("./data/data.csv")
   |> Stream.chunk_every(1000)
-  |> Stream.map(fn batch_orders -> Repo.insert_all(Order, batch_orders) end)
+  |> Stream.map(fn batch_orders -> Order.insert_all(batch_orders) end)
   |> Stream.run()
 end

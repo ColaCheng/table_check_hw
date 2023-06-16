@@ -7,6 +7,16 @@ defmodule TableCheckHw.Order do
 
   alias TableCheckHw.Schema.Order
 
+  @spec insert_all(
+          entries_or_query :: [%{required(atom()) => value} | Keyword.t(value)] | Ecto.Query.t(),
+          opts :: Keyword.t()
+        ) ::
+          {non_neg_integer, nil | [term]}
+        when value: term() | Ecto.Query.t()
+  def insert_all(entries_or_query, opts \\ []) do
+    Repo.insert_all(Order, entries_or_query, opts)
+  end
+
   @spec count_customers_by_restaurant_name(restaurant_name :: String.t()) :: integer()
   def count_customers_by_restaurant_name(restaurant_name) do
     from(o in Order,
