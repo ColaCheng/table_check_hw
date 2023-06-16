@@ -1,5 +1,14 @@
 # Solution
 
+This solution is according to my understanding of the assignment to implement. There are some parts of the angle we can discuss further and might change the implementation.
+
+For example:
+- The incoming data rate for this service
+- The average size for each incoming data
+- The API request rate for clients
+- Considering the scale of data, we might need to compare the tradeoff between Relational Database and NoSQL database
+- And so on
+
 ## Database
 
 I choose PostgreSQL to store the order data because we need to aggregate the data to fit our situation.
